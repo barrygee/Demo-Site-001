@@ -1,0 +1,14 @@
+{
+  "name": "tailwinds",
+  "version": "1.0.0",
+  "description": "Example website",
+  "main": "app.js",
+  "scripts": {
+    "build": "tailwindcss build app/styles/styles.css -o public/styles/styles.css" 
+  },
+  "author": "Barry Gee",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.1.2"
+  }
+}
