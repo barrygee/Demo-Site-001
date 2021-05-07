@@ -49,3 +49,28 @@ function toggleModal () {
     body.classList.toggle('modal-active')
 }
         
+
+(function() {
+  // your page initialization code here
+  // the DOM will be available here
+
+})();
+
+// animate when in view
+const callback = function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-fadeIn");
+      } else {
+        entry.target.classList.remove("animate-fadeIn");
+      }
+    });
+  };
+  
+  const observer = new IntersectionObserver(callback);
+  
+  const targets = document.querySelectorAll(".show-on-scroll");
+  targets.forEach(function (target) {
+    target.classList.add("opacity-0");
+    observer.observe(target);
+  });
